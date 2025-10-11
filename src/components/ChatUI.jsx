@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const modes = [
   { id: "caption", label: "📝 Caption" },
@@ -199,17 +200,17 @@ export default function ChatUI() {
 
                       />
 
-                      <button
+                                <button
 
-                        type="submit"
+                                  type="submit"
 
-                        disabled={loading}
+                                  disabled={loading}
 
-                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition send-button">
+                                  className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-xl font-semibold transition send-button send-button-icon">
 
-                        {loading ? "..." : "Send"}
+                                  {loading ? "..." : <Image src="/send.svg" alt="Send" width={24} height={24} />}
 
-                      </button>
+                                </button>
 
                     </form>
 
