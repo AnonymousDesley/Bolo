@@ -55,165 +55,165 @@ export default function ChatUI() {
     }
   };
 
-        return (
+                return (
 
-          <div className="flex flex-col h-full max-w-2xl mx-auto p-4 bg-[#0c0c0c] rounded-2xl shadow-lg border border-purple-800 relative overflow-hidden chat-ui">
+                  <div className="flex flex-col h-full min-h-screen max-w-2xl mx-auto p-4 bg-[#0c0c0c] rounded-2xl shadow-lg border border-purple-800 relative overflow-hidden chat-ui">
 
-            {/* Floating Mode Buttons */}
+                    {/* Floating Mode Buttons */}
 
-            <div className="absolute top-3 left-0 right-0 flex justify-center gap-3 z-20 mode-buttons">
+                    <div className="absolute top-3 left-0 right-0 flex justify-center gap-3 z-20 mode-buttons">
 
-              <AnimatePresence>
+                      <AnimatePresence>
 
-                {modes.map((m, i) => (
+                        {modes.map((m, i) => (
 
-                  <motion.button
+                          <motion.button
 
-                    key={m.id}
+                            key={m.id}
 
-                    initial={{
+                            initial={{
 
-                      opacity: 0,
+                              opacity: 0,
 
-                      x: i % 2 === 0 ? -50 : 50,
+                              x: i % 2 === 0 ? -50 : 50,
 
-                      y: -20,
+                              y: -20,
 
-                    }}
+                            }}
 
-                    animate={{
+                            animate={{
 
-                      opacity: 1,
+                              opacity: 1,
 
-                      x: 0,
+                              x: 0,
 
-                      y: 0,
+                              y: 0,
 
-                      transition: { delay: i * 0.1, type: "spring", stiffness: 200 },
+                              transition: { delay: i * 0.1, type: "spring", stiffness: 200 },
 
-                    }}
+                            }}
 
-                    exit={{
+                            exit={{
 
-                      opacity: 0,
+                              opacity: 0,
 
-                      x: i % 2 === 0 ? 50 : -50,
+                              x: i % 2 === 0 ? 50 : -50,
 
-                      transition: { duration: 0.2 },
+                              transition: { duration: 0.2 },
 
-                    }}
+                            }}
 
-                    onClick={() => setMode(m.id)}
+                            onClick={() => setMode(m.id)}
 
-                    className={`px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 mode-button ${
+                            className={`px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 mode-button ${
 
-                      mode === m.id
+                              mode === m.id
 
-                        ? "bg-purple-600 text-white"
+                                ? "bg-purple-600 text-white"
 
-                        : "bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white"
+                                : "bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white"
 
-                    }`}>
+                            }`}>
 
-                    {m.label}
+                            {m.label}
 
-                  </motion.button>
+                          </motion.button>
 
-                ))}
+                        ))}
 
-              </AnimatePresence>
+                      </AnimatePresence>
 
-            </div>
+                    </div>
 
-      
+              
 
-            {/* Chat Messages */}
+                    {/* Chat Messages */}
 
-            <div className="flex-1 overflow-y-auto mt-16 space-y-3 p-2 scrollbar-hide flex-grow">
+                    <div className="flex-1 overflow-y-auto mt-16 space-y-3 p-2 scrollbar-hide flex-grow">
 
-              {messages.map((msg, i) => (
+                      {messages.map((msg, i) => (
 
-                <motion.div
+                        <motion.div
 
-                  key={i}
+                          key={i}
 
-                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                          initial={{ opacity: 0, y: 20, scale: 0.95 }}
 
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
 
-                  transition={{ duration: 0.3 }}
+                          transition={{ duration: 0.3 }}
 
-                  className={`p-3 rounded-xl max-w-[80%] ${
+                          className={`p-3 rounded-xl max-w-[80%] ${
 
-                    msg.role === "user"
+                            msg.role === "user"
 
-                      ? "bg-purple-600 text-white self-end ml-auto"
+                              ? "bg-purple-600 text-white self-end ml-auto"
 
-                      : "bg-[#111] text-gray-100 self-start"
+                              : "bg-[#111] text-gray-100 self-start"
 
-                  }`}>
+                          }`}>
 
-                  {msg.text}
+                          {msg.text}
 
-                </motion.div>
+                        </motion.div>
 
-              ))}
+                      ))}
 
-      
+              
 
-              {loading && (
+                      {loading && (
 
-                <motion.div
+                        <motion.div
 
-                  initial={{ opacity: 0 }}
+                          initial={{ opacity: 0 }}
 
-                  animate={{ opacity: 1 }}
+                          animate={{ opacity: 1 }}
 
-                  className="p-3 bg-[#111] text-gray-400 rounded-xl w-fit animate-pulse">
+                          className="p-3 bg-[#111] text-gray-400 rounded-xl w-fit animate-pulse">
 
-                  Bolo dey reason your matter 🤔...
+                          Bolo dey reason your matter 🤔...
 
-                </motion.div>
+                        </motion.div>
 
-              )}
+                      )}
 
-            </div>
+                    </div>
 
-      
+              
 
-            {/* Input Area */}
+                    {/* Input Area */}
 
-            <form onSubmit={handleSend} className="flex items-center gap-2 mt-4">
+                    <form onSubmit={handleSend} className="flex items-center gap-2 mt-4">
 
-              <input
+                      <input
 
-                type="text"
+                        type="text"
 
-                placeholder={`Type your message for ${mode} mode...`}
+                        placeholder={`Type your message for ${mode} mode...`}
 
-                value={input}
+                        value={input}
 
-                onChange={(e) => setInput(e.target.value)}
+                        onChange={(e) => setInput(e.target.value)}
 
-                className="flex-1 bg-[#1a1a1a] text-white px-4 py-3 rounded-xl outline-none border border-purple-700"
+                        className="flex-1 bg-[#1a1a1a] text-white px-4 py-3 rounded-xl outline-none border border-purple-700"
 
-              />
+                      />
 
-              <button
+                      <button
 
-                type="submit"
+                        type="submit"
 
-                disabled={loading}
+                        disabled={loading}
 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition send-button">
+                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition send-button">
 
-                {loading ? "..." : "Send"}
+                        {loading ? "..." : "Send"}
 
-              </button>
+                      </button>
 
-            </form>
+                    </form>
 
-          </div>
+                  </div>
 
-        );
+                );
 }
