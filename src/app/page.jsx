@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className="main-container bg-[#181516] text-white min-h-screen">
+    <main className="main-container text-white min-h-screen" style={{ backgroundImage: "url('/background-hero.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
       <ChatUI />
     </main>
