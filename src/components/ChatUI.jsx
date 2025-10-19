@@ -1,3 +1,4 @@
+
 // src/components/ChatUI.jsx
 "use client";
 
@@ -6,10 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const features = [
-  { id: "caption", title: "Caption", description: "Generates Captivating captions to promote your business on social Media" },
-  { id: "advice", title: "Advice", description: "Get personalized advice on various topics, from career to personal growth" },
-  { id: "ideas", title: "Ideas", description: "Brainstorm innovative ideas for your projects, content, or business ventures" },
-  { id: "motivation", title: "Motivation", description: "Receive daily doses of inspiration and motivational quotes to keep you going" },
+  { id: "caption", title: "Caption" },
+  { id: "advice", title: "Advice" },
+  { id: "ideas", title: "Ideas" },
+  { id: "motivation", title: "Motivation" },
 ];
 
 const history = [
@@ -160,7 +161,6 @@ export default function ChatUI() {
               whileHover={{ scale: 1.05 }}
             >
               <h3 className="text-white font-bold">{feature.title}</h3>
-              <p className="text-gray-400 text-sm mt-2">{feature.description}</p>
               <div className="text-right mt-4">↗</div>
             </motion.div>
           ))}
