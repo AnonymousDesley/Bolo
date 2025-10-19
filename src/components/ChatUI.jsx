@@ -1,3 +1,4 @@
+
 // src/components/ChatUI.jsx
 "use client";
 
@@ -64,20 +65,31 @@ export default function ChatUI() {
   return (
     <div className="chat-container flex flex-col h-full max-w-2xl mx-auto bg-[#181516] rounded-2xl shadow-lg relative overflow-hidden">
       {!selectedFeature ? (
-        <div className="feature-grid p-4">
-          {features.map((feature) => (
-            <motion.div
-              key={feature.id}
-              className="feature-card"
-              onClick={() => handleFeatureSelect(feature.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="feature-icon">{feature.icon}</div>
-              <div className="feature-title">{feature.title}</div>
-              <div className="feature-description">{feature.description}</div>
-            </motion.div>
-          ))}
+        <div className="flex flex-col h-full">
+          <div className="p-4 text-center">
+            <h2 className="text-2xl font-bold text-white">Hello, I'm Bolo</h2>
+            <p className="text-gray-400">What can I help you with today?</p>
+          </div>
+          <div className="feature-grid p-4 flex-grow">
+            {features.map((feature) => (
+              <motion.div
+                key={feature.id}
+                className="feature-card"
+                onClick={() => handleFeatureSelect(feature.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className="feature-icon">{feature.icon}</div>
+                <div className="feature-title">{feature.title}</div>
+                <div className="feature-description">{feature.description}</div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="bottom-nav flex justify-around items-center p-4 border-t border-gray-700">
+            <div>Icon1</div>
+            <div>Icon2</div>
+            <div>Icon3</div>
+          </div>
         </div>
       ) : (
         <>

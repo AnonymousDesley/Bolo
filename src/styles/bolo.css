@@ -66,6 +66,7 @@
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 1px solid #5C3E45;
 }
 
 .feature-card:hover {
@@ -86,4 +87,18 @@
 .feature-description {
   font-size: 12px;
   color: #8E8E93;
+}
+
+.bottom-nav {
+  background-color: #181516;
+}
+
+.bottom-nav > div {
+  color: #8E8E93;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.bottom-nav > div:hover {
+  color: #DEDAE3;
 }
