@@ -2,21 +2,18 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <header className="text-center flex flex-col items-center bg-black/40 p-4 rounded-3xl border border-purple-600/30 backdrop-blur-md">
+    <header className="flex items-center justify-between p-4 bg-transparent">
+      <div className="flex items-center gap-3">
         <Image
-          src="/logo.png"
+          src="/file.svg" // Using the new logo
           alt="Bolo Logo"
-          width={100}
-          height={100}
-          className="rounded-full object-cover"
+          width={40}
+          height={40}
+          className="rounded-full"
         />
-        <h1 className="text-2xl sm:text-3xl font-bold text-white responsive-h1">
-          {" "}
-          Bolo AI
-        </h1>
-        <p className="text-gray-300 mt-1">"- AI wey sabi your hustle-"</p>
-      </header>
-    </div>
+        <h1 className="text-xl font-bold text-white">Bolo AI</h1>
+      </div>
+      {/* Add any other header elements from the design, like a menu icon */}
+    </header>
   );
 }
