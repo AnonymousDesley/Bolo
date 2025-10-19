@@ -62,7 +62,7 @@ export default function ChatUI() {
   };
 
   return (
-    <div className="chat-container flex flex-col h-full max-w-2xl mx-auto bg-[#1E1E1E] rounded-2xl shadow-lg relative overflow-hidden">
+    <div className="chat-container flex flex-col h-full max-w-2xl mx-auto bg-[#181516] rounded-2xl shadow-lg relative overflow-hidden">
       {!selectedFeature ? (
         <div className="feature-grid p-4">
           {features.map((feature) => (

@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className="main-container bg-[#1E1E1E] text-white min-h-screen">
+    <main className="main-container bg-[#181516] text-white min-h-screen">
       <Header />
       <ChatUI />
     </main>
