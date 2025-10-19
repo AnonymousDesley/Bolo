@@ -13,10 +13,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-html {
-  background-color: #181516;
-}
-
 body {
   background-image: url('/background-hero.jpg');
   background-size: cover;
