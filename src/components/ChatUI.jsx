@@ -133,7 +133,7 @@ export default function ChatUI() {
       </header>
 
       {/* Welcome Message */}
-      <div className="p-4 text-center bg-gradient-to-r from-purple-500 to-pink-500">
+      <div className="p-4 text-center">
         <h1 className="text-4xl font-bold">Hello, I'm Bolo</h1>
         <p className="text-gray-200">What can I help you with today?</p>
       </div>
