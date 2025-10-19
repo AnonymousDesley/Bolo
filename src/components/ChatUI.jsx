@@ -123,7 +123,7 @@ export default function ChatUI() {
   }
 
   return (
-    <div className="flex flex-col h-full bg-[#181516] text-white">
+    <div className="flex flex-col h-full text-white">
       {/* Header */}
       <header className="flex justify-between items-center p-4">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
