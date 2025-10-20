@@ -15,12 +15,10 @@
 
 html,
 body {
-  background-color: #181516; /* Fallback background color */
   min-height: 100vh;
 }
 
 body {
-  background-color: #181516; /* Fallback background color */
   background-image: url('/background-hero.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
