@@ -20,8 +20,14 @@ body {
 }
 
 body {
+  background-color: #181516; /* Fallback background color */
+  background-image: url('/background-hero.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
