@@ -17,6 +17,7 @@ html,
 body {
   background-color: #181516; /* Fallback background color */
   min-height: 100vh;
+  overflow: hidden; /* Prevent unwanted scrolling */
 }
 
 body {
